@@ -20,9 +20,9 @@ class Car(Sprite):
         self.moving_down = False
 
     def update(self):
-        if self.moving_down and self.rect.top > 0:
+        if self.moving_up and self.rect.top > 0:
             self.rect.y -= self.settings.car_speed
-        if self.moving_up and self.rect.bottom < self.screen_rect.bottom:
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
             self.rect.y += self.settings.car_speed
         
     def blitme(self):
